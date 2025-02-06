@@ -19,8 +19,25 @@ body {
 }
 
 #welcome-text {
-    padding-top: 100px;
-    padding-bottom: 60px;
-    border-bottom: #00d377;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #00d377;
 }
 
+.intro-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+//characters ul
+.chars-ul {
+    list-style: none;
+}
+
+.chars-ul li {
+    padding-bottom: 10px;
+}
+.chars-ul li:hover {
+    background-color: #008346;
+}
