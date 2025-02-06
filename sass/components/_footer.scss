@@ -1,1 +1,17 @@
 @use '../abstracts' as a;
+footer {
+  background-color: #25422b;
+  padding: 10px 0px;  
+}
+
+.copyright {
+  text-align: center;
+}
+
+#sw-logo-footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

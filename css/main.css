@@ -14,7 +14,7 @@ h2 {
 
 p {
   line-height: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 12px;
 }
 
@@ -31,8 +31,26 @@ header {
   padding: 10px 0px;
 }
 
-#main-logo {
-  padding-top: 20px;
+#header-logo {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  background-color: #25422b;
+  padding: 10px 0px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+#sw-logo-footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,14 +80,18 @@ body {
 
 #welcome-text {
   justify-content: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   border-bottom: 1px solid #00d377;
 }
 
 .intro-text {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.main-content {
+  padding-bottom: 60px;
 }
 
 .chars-ul {
@@ -82,4 +104,8 @@ body {
 
 .chars-ul li:hover {
   background-color: #008346;
+}
+
+.poster {
+  padding-bottom: 60px;
 }/*# sourceMappingURL=main.css.map */
