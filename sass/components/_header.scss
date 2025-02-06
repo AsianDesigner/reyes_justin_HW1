@@ -1,5 +1,12 @@
 @use '../abstracts' as a;
 header {
-   background-color: #1f3723;
+   background-color: #25422b;
    padding: 10px 0px;  
+}
+
+#main-logo {
+   padding-top: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }

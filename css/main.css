@@ -1,49 +1,15 @@
-@font-face {
-  font-family: InterTightBlack;
-  font-weight: 900;
-  font-style: normal;
-  src: url("../fonts/InterTight-Black.ttf") format("ttf"), url("../fonts/InterTight-Black.ttf") format("ttf");
-}
-@font-face {
-  font-family: InterTightBold;
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/InterTight-Bold.ttf") format("ttf"), url("../fonts/InterTight-Bold.ttf") format("ttf");
-}
-@font-face {
-  font-family: InterTightRegular;
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/InterTight-Regular.ttf") format("ttf"), url("../fonts/InterTight-Regular.ttf") format("ttf");
-}
 body {
-  font-family: "InterTightRegular", arial, sans-serif;
+  font-family: "Orbitron", arial, sans-serif;
 }
 
 h1 {
   display: none;
 }
 
-#main-hero h2 {
-  font-family: "InterTightBlack", helvetica, arial;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
 h2 {
-  font-family: "InterTightBold", helvetica, arial;
+  font-family: "Orbitron", helvetica, arial;
   font-size: 28px;
   margin-bottom: 20px;
-}
-
-.hey-message p {
-  font-family: "InterTightBold", helvetica, arial;
-  font-size: 20px;
-}
-@media (min-width: 800px) {
-  .hey-message p {
-    font-size: 48px;
-  }
 }
 
 p {
@@ -53,7 +19,7 @@ p {
 }
 
 h1, h2, h3, p, li, a {
-  color: #FFE9E9;
+  color: #00d377;
 }
 
 a {
@@ -61,16 +27,19 @@ a {
 }
 
 header {
-  background-color: #1f3723;
+  background-color: #25422b;
   padding: 10px 0px;
 }
 
-body {
-  background-color: #123b1f;
+#main-logo {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-width-bg {
-  background-color: #120F0F;
+body {
+  background-color: #1f3723;
 }
 
 .mobile-feature {
@@ -89,4 +58,10 @@ body {
   .desktop-feature {
     display: block;
   }
+}
+
+#welcome-text {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  border-bottom: #00d377;
 }/*# sourceMappingURL=main.css.map */
