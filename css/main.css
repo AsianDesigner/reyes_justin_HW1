@@ -94,16 +94,21 @@ body {
   padding-bottom: 60px;
 }
 
-.chars-ul {
+#chars-ul {
   list-style: none;
 }
 
-.chars-ul li {
+#chars-ul li {
   padding-bottom: 10px;
+  list-style: none;
 }
 
-.chars-ul li:hover {
+#chars-ul li:hover {
   background-color: #008346;
+}
+
+#chars-ul li a:hover {
+  cursor: pointer;
 }
 
 .poster {
