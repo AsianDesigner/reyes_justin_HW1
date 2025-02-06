@@ -1,6 +1,5 @@
 body {
-    background-image: url(../images/space_1.png);
-    background-size: contain;
+    background-color: #123b1f;
 }
 
 .nav-width-bg {
@@ -20,80 +19,5 @@ body {
 
     @media (min-width: 760px) {
         display: block;
-    }
-}
-
-
-.mobile-feature img {
-    height: 151px;
-    width: 151px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-#main-hero {
-    background-color: #111;
-
-    @media (min-width: 760px) {
-        background-image: url(../images/main-hero.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 0%, 0%;
-    }
-}
-
-#main-hero h2 {
-    margin-top: 250px;
-
-    @media (min-width: 760px) {
-        margin-top: 420px;
-    }
-}
-
-#main-intro {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding-top: 8px;
-
-    @media (min-width: 760px) {
-        padding-top: 140px;
-    }
-}
-
-.hey-message {
-    margin-top: 8px;
-    text-align: center;
-}
-
-.hey-message p span {
-    color: #2D56FF;
-}
-
-.hero-intro {
-    @media (min-width: 760px) {
-        padding-top: 50px;
-    }
-}
-
-
-#featured-projects {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding-top: 40px;
-
-    @media (min-width: 760px) {
-        padding-top: 80px;
-    }
-}
-
-.show-more {
-    background-color: #FFE9E9;
-    padding: 15px;
-    margin-top: 24px;
-    margin-bottom: 40px;
-    .show-more:hover {
-        cursor: pointer;
-    }
-
-    @media (min-width: 760px) {
-        margin-bottom: 100px;
     }
 }

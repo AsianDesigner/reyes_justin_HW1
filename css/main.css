@@ -1,0 +1,92 @@
+@font-face {
+  font-family: InterTightBlack;
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/InterTight-Black.ttf") format("ttf"), url("../fonts/InterTight-Black.ttf") format("ttf");
+}
+@font-face {
+  font-family: InterTightBold;
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/InterTight-Bold.ttf") format("ttf"), url("../fonts/InterTight-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: InterTightRegular;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/InterTight-Regular.ttf") format("ttf"), url("../fonts/InterTight-Regular.ttf") format("ttf");
+}
+body {
+  font-family: "InterTightRegular", arial, sans-serif;
+}
+
+h1 {
+  display: none;
+}
+
+#main-hero h2 {
+  font-family: "InterTightBlack", helvetica, arial;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: "InterTightBold", helvetica, arial;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.hey-message p {
+  font-family: "InterTightBold", helvetica, arial;
+  font-size: 20px;
+}
+@media (min-width: 800px) {
+  .hey-message p {
+    font-size: 48px;
+  }
+}
+
+p {
+  line-height: 24px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+h1, h2, h3, p, li, a {
+  color: #FFE9E9;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #1f3723;
+  padding: 10px 0px;
+}
+
+body {
+  background-color: #123b1f;
+}
+
+.nav-width-bg {
+  background-color: #120F0F;
+}
+
+.mobile-feature {
+  display: block;
+}
+@media (min-width: 760px) {
+  .mobile-feature {
+    display: none;
+  }
+}
+
+.desktop-feature {
+  display: none;
+}
+@media (min-width: 760px) {
+  .desktop-feature {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */
