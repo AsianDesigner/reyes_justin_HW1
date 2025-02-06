@@ -2,10 +2,10 @@
     const charsCon = document.querySelector("#chars-ul");
     const infoTemplate = document.querySelector("#info-template");
     const detailsCon = document.querySelector("#details-con");
-    const baseUrl = "https://swapi.dev/api/people/";
+    const baseUrl = "https://swapi.dev/api/";
 
     function getChars() {
-        fetch(`${baseUrl}?=people`)
+        fetch(`${baseUrl}people`)
         .then(response => response.json())
         .then(function(response) {
             console.log(response);
@@ -15,7 +15,8 @@
                 const li = document.createElement("li");
                 const a = document.createElement("a");
                 a.textContent = character["name"];
-                a.dataset.info = character["name"];
+                const firstFilmURL = character.films[0];
+                a.dataset.info = firstFilmURL;
                 li.appendChild(a);
                 ul.appendChild(li);
             })
@@ -35,13 +36,15 @@
     function getFilms(e) {
         const filmURL = e.currentTarget.dataset.info;
         detailsCon.innerHTML = "";
-        fetch(`${baseUrl}?tt=${infoURL}`)
-        .then(response => response.json())
-        .then(function(response) {
-            console.log(response.short.info.infoBody);
+        fetch(filmURL)
+            .then(response => response.json())
+            .then(function(film) {
+            console.log(film.results);
             const clone = infoTemplate.content.cloneNode(true);
-            const infoDescription = clone.querySelector(".movie-desc");
-            infoDescription.textContent = response.short.review.reviewBody;
+            const filmTitle = clone.querySelector(".movie-title");
+            const filmDescription = clone.querySelector(".movie-desc");
+            filmTitle.textContent = film.title
+            filmDescription.textContent = film.opening_crawl
             detailsCon.appendChild(clone);
         })
         .catch()
