@@ -1,0 +1,47 @@
+//import variables file and save it in "v" namespace
+
+@use '../abstracts/variables' as v;
+
+//I can use any variable in the variables partial
+body {
+    font-family: v.$body-font-family;
+}
+
+h1 {
+    display: none;
+}
+
+#main-hero h2 {
+    font-family: v.$welcome-font-family;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: v.$heading-font-family;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hey-message p {
+    font-family: v.$heading-font-family;
+    font-size: 20px;
+
+    @media (min-width: 800px) {
+        font-size: 48px;
+    }
+}
+
+p {
+    line-height: 24px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+h1, h2, h3, p, li, a {
+    color: v.$primary-color;
+}
+
+a {
+    text-decoration: none;
+ }
