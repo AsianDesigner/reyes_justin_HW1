@@ -20,14 +20,18 @@ body {
 
 #welcome-text {
     justify-content: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     border-bottom: 1px solid #00d377;
 }
 
 .intro-text {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.main-content {
+    padding-bottom: 60px;
 }
 
 //characters ul
@@ -40,4 +44,8 @@ body {
 }
 .chars-ul li:hover {
     background-color: #008346;
+}
+
+.poster {
+    padding-bottom: 60px;
 }
