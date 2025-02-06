@@ -32,35 +32,22 @@
 
         <div class="grid-con main-content">
             <h3 class="col-span-full">Character Database:</h3>
-            <ul class="chars-ul col-span-full l-col-start-1 l-col-span-4">
-                <li>Luke Skywalker</li>
+            
+            <div id="chars-ul" class="col-span-full l-col-start-1 l-col-span-3">
 
-                <li>Anakin Skywalker</li>
-
-                <li>Obi-Wan Kenobi</li>
-
-                <li>Yoda</li>
-
-                <li>Han Solo</li>
-
-                <li>Chewbacca</li>
-
-                <li>Leia Organa</li>
-
-                <li>C3PO</li>
-
-                <li>R2-D2</li>
-
-                <li>Lando Calrissian</li>
-            </ul>
+            </div>
 
             <img src="images/sw_4_poster.jpg" alt="Star Wars Episode 4 A New Hope" class="desktop-feature col-span-2 l-col-start-6 l-col-span-3">
 
-            <div class="details col-span-full l-col-start-9 l-col-span-full">
-                <h3>Title</h3>
-                <p>1977</p>
-                <p>In a period of galactic turmoil...</p>
-            </div>    
+            <div class="col-span-full l-col-start-9 l-col-span-full" id="details-con">
+                <!-- template here -->
+            </div>
+
+            <template class="col-span-full l-col-start-9 l-col-span-full" id="info-template">
+                <h3 class="movie_title"></h3>
+                <p class="movie_date"></p>
+                <p class="movie_desc"></p>
+            </template>
 
             <img src="images/sw_4_poster.jpg" alt="Star Wars Episode 4 A New Hope" class="mobile-feature col-span-2 l-col-start-6 l-col-span-3">
 
