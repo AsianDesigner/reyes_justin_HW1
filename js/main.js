@@ -5,6 +5,9 @@
     const baseUrl = "https://swapi.dev/api/";
 
     function getChars() {
+        const loader = document.querySelector('#loader');
+        loader.classList.toggle('hidden');
+        console.log(loader)
         fetch(`${baseUrl}people`)
         .then(response => response.json())
         .then(function(response) {
@@ -19,6 +22,7 @@
                 li.appendChild(a);
                 ul.appendChild(li);
             })
+            loader.classList.toggle('hidden');
             charsCon.appendChild(ul);
         })
         .then(function() {
