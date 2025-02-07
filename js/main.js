@@ -3,6 +3,14 @@
     const infoTemplate = document.querySelector("#info-template");
     const detailsCon = document.querySelector("#details-con");
     const baseUrl = "https://swapi.dev/api/";
+    const imagesMap = {
+        "https://swapi.dev/api/films/1/": "images/sw_1_poster.jpg",
+        "https://swapi.dev/api/films/2/": "images/sw_2_poster.jpg",
+        "https://swapi.dev/api/films/3/": "images/sw_3_poster.jpg",
+        "https://swapi.dev/api/films/4/": "images/sw_4_poster.jpg",
+        "https://swapi.dev/api/films/5/": "images/sw_5_poster.jpg",
+        "https://swapi.dev/api/films/6/": "images/sw_6_poster.jpg"
+    };
 
     function getChars() {
         const loader = document.querySelector('#loader');
@@ -52,8 +60,12 @@
                 const clone = infoTemplate.content.cloneNode(true);
                 const movieTitle = clone.querySelector(".movie-title");
                 const introCrawl = clone.querySelector(".movie-desc");
+                const poster = document.createElement("img");
+                poster.src = imagesMap[film];
+                poster.classList.add('poster')
                 introCrawl.textContent = response.opening_crawl;
                 movieTitle.textContent = response.title;
+                detailsCon.appendChild(poster);
                 detailsCon.appendChild(clone);
             })
             .catch()
