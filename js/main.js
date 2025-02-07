@@ -15,8 +15,7 @@
                 const li = document.createElement("li");
                 const a = document.createElement("a");
                 a.textContent = character["name"];
-                const firstFilmURL = character.films[0];
-                a.dataset.info = firstFilmURL;
+                a.dataset.films = character["films"].join(' ');
                 li.appendChild(a);
                 ul.appendChild(li);
             })
@@ -33,23 +32,27 @@
         })
     }
 
-    function getFilms(e) {
-        const filmURL = e.currentTarget.dataset.info;
-        detailsCon.innerHTML = "";
-        fetch(filmURL)
-            .then(response => response.json())
-            .then(function(film) {
-            console.log(film.results);
-            const clone = infoTemplate.content.cloneNode(true);
-            const filmTitle = clone.querySelector(".movie-title");
-            const filmDescription = clone.querySelector(".movie-desc");
-            filmTitle.textContent = film.title
-            filmDescription.textContent = film.opening_crawl
-            detailsCon.appendChild(clone);
-        })
-        .catch()
-    }
-
     getChars();
 
+
+    function getFilms(e) {
+        e.preventDefault();
+        const filmsURL = e.currentTarget.dataset.films.split(' ');
+        console.log(filmsURL)
+        detailsCon.innerHTML = "";
+        filmsURL.forEach(film => {
+            fetch(film)
+            .then(response => response.json())
+            .then(function(response) {
+                console.log(response.title);
+                const clone = infoTemplate.content.cloneNode(true);
+                const movieTitle = clone.querySelector(".movie-title");
+                const introCrawl = clone.querySelector(".movie-desc");
+                introCrawl.textContent = response.opening_crawl;
+                movieTitle.textContent = response.title;
+                detailsCon.appendChild(clone);
+            })
+            .catch()
+        })
+    }
 })();
